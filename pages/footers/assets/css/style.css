@@ -117,3 +117,56 @@
     font-size: 0.85rem;
     color: #a55e70;
 }
+
+.footer-four {
+    background-color: #ffeaf4;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-top: 2px solid #f7c5d5;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.05);
+    margin-top: 2rem;
+}
+
+.footer4-top {
+    margin-bottom: 1rem;
+}
+
+.footer4-blossom {
+    width: 50px;
+    animation: wiggle 1.8s infinite ease-in-out;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.footer4-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer4-icon {
+    width: 25px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.footer4-icon:hover {
+    transform: rotateY(180deg);
+}
