@@ -5,6 +5,10 @@
     text-decoration: none;
 }
 
+.footer-wrapper {
+    margin-bottom: 2rem;
+}
+
 .footer-one {
     background-color: #ffe4ec;
     color: #8b0000;
@@ -13,4 +17,51 @@
     font-size: 0.9rem;
     font-weight: 500;
     box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer-two {
+    background: linear-gradient(to right, #ffe0e6, #ffc1cc);
+    padding: 1rem 1rem;
+    text-align: center;
+    border-top: 2px solid #f8a8b4;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.footer-logo {
+    width: 60px;
+    height: auto;
+    transition: transform 0.4s ease;
+}
+
+.footer-logo:hover {
+    transform: rotate(-5deg) scale(1.1);
+}
+
+.footer-text {
+    text-align: left;
+}
+
+.footer-title {
+    font-size: 1.5rem;
+    color: #d6336c;
+}
+
+.footer-subtext {
+    font-size: 0.9rem;
+    color: #6c3a4f;
+}
+
+.footer-bottom {
+    font-size: 0.8rem;
+    color: #a55e70;
+    margin-top: 1rem;
 }
