@@ -65,3 +65,55 @@
     color: #a55e70;
     margin-top: 1rem;
 }
+
+.footer-three {
+    background-color: #fff0f5;
+    padding: 2rem 1rem 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    border-top: 2px solid #f8a8b4;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.footer3-top {
+    margin-bottom: 1rem;
+}
+
+.footer3-logo {
+    width: 70px;
+    animation: bounceLogo 2s infinite;
+}
+
+@keyframes bounceLogo {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.footer3-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer3-link {
+    color: #d6336c;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer3-link:hover {
+    color: #8b0000;
+    transform: scale(1.1);
+}
+
+.footer3-bottom {
+    font-size: 0.85rem;
+    color: #a55e70;
+}
