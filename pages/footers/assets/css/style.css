@@ -170,3 +170,80 @@
 .footer4-icon:hover {
     transform: rotateY(180deg);
 }
+
+.footer-five {
+    background-color: #fff0f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    border-top: 2px solid #f8bcd0;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.03);
+    margin-top: 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer5-left .footer5-blossom {
+    width: 50px;
+    animation: blossomPulse 2s ease-in-out infinite;
+}
+
+.footer5-brand {
+    font-size: 1.5rem;
+    color: #d6336c;
+    font-weight: 600;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 2px #ffb6c1;
+    }
+    to {
+        text-shadow: 0 0 12px #ff69b4, 0 0 18px #ff69b4;
+    }
+}
+
+@keyframes blossomPulse {
+    0% {
+        transform: scale(1); opacity: 1;
+    }
+    50% {
+        transform: scale(1.1); opacity: 0.85;
+    }
+    100% {
+        transform: scale(1); opacity: 1;
+    }
+}
+
+.footer5-right {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer5-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.footer5-link img {
+    width: 25px;
+    margin-bottom: 0.3rem;
+}
+
+.footer5-label {
+    font-size: 0.80rem;
+    color: #b03060;
+    font-weight: 500;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer5-label:hover {
+    color: #ff69b4;
+    text-shadow: 0 0 5px rgba(255, 105, 180, 0.6);
+}
