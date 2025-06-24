@@ -24,6 +24,7 @@
     background-color: rgb(255, 224, 230);
     justify-content: space-between;
     max-height: 10rem;
+    margin-bottom: 1.5rem;
 
     .left {
         display: flex;
@@ -31,7 +32,7 @@
         gap: .5rem;
 
         .logo {
-        max-width: 6rem;
+        max-width: 3rem;
         }
 
         .company-name {
@@ -74,30 +75,196 @@
     }
 }
 
-.footer {
+.header-two {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    background-color: rgb(255, 224, 230);
-    font-size: .8rem;
-    padding: .5rem 1rem;
-    justify-self: end;
+    padding: 1rem 2rem;
+    background: linear-gradient(to right, #ffc1cc, #ff99ac);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(255, 105, 135, 0.3);
+    margin-bottom: 2rem;
 }
 
-.contents {
-    height: 100%;
-    /* border: 1px dotted black; */
+.header-left {
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    flex: 1;
+    align-items: center;
+    gap: 1rem;
+}
 
-    .hero {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: start;
-        align-items: center;
+.header-two .logo {
+    height: 50px;
+    width: auto;
+}
+
+.brand {
+    font-size: 2rem;
+    color: #8b0000;
+    font-weight: bold;
+}
+
+.header-nav {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.nav-btn {
+    padding: 0.6rem 1.2rem;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #d6336c;
+    font-weight: 600;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #ffd1dc;
+    color: #8b0000;
+    transform: scale(1.05);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.nav-btn:active {
+    background-color: #ff9aa2;
+    transform: scale(0.95);
+    box-shadow: inset 2px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.logo-hover-wrapper {
+    position: relative;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo-hover-wrapper .logo {
+    height: 80px;
+    width: auto;
+    transition: transform 0.5s ease-in-out;
+}
+
+.logo-hover-wrapper:hover .logo {
+    animation: flyUp 0.8s ease-in-out;
+}
+
+@keyframes flyUp {
+    0% {
+        transform: translateY(0) rotate(0);
     }
+    25% {
+        transform: translateY(-10px) rotate(-5deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+    75% {
+        transform: translateY(-10px) rotate(-5deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+}
+
+.brand-slide {
+    font-size: 2rem;
+    color: #8b0000;
+    font-weight: bold;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.logo-hover-wrapper:hover .brand-slide {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.header-three {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    background: linear-gradient(to right, #ffd1dc, #ffe4ec);
+    position: relative;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(255, 105, 135, 0.3);
+    margin-bottom: 2rem;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    gap: 1rem;
+}
+
+.logo-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo-animate {
+    height: 60px;
+    animation: pulse-glow 2.5s infinite ease-in-out;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 5px #ff80a6);
+    }
+    50% {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 15px #ff4d88);
+    }
+}
+
+.nav-btn3 {
+    position: relative;
+    padding: 0.6rem 1.2rem;
+    background-color: white;
+    border-radius: 30px;
+    font-size: 1rem;
+    color: #d6336c;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.nav-btn3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #ffc1cc, #ff99ac);
+    z-index: 0;
+    transition: left 0.4s ease;
+}
+
+.nav-btn3:hover::before {
+    left: 0;
+}
+
+.nav-btn3:hover {
+    color: white;
+    transform: scale(1.05);
+}
+
+.nav-btn3:active {
+    transform: scale(0.95);
+    box-shadow: inset 2px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nav-btn3:not(.active):hover {
+    background-color: transparent;
+}
+
+.nav-btn3 {
+    position: relative;
+    z-index: 1;
 }
