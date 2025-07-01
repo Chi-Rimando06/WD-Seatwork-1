@@ -288,64 +288,93 @@
     z-index: 1;
 }
 
-.side-panel-header {
+.header-four {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    width: 120px;
-    min-height: 100vh;
-    background: linear-gradient(to bottom, #ffe6ec, #ffc1cc);
+    padding: 1rem 2rem;
+    background: linear-gradient(to right, #ffe0e6, #ffc1cc);
     border-radius: 12px;
-    padding: 1rem 0;
-    margin-bottom: 2rem;
-    overflow-y: auto;
-}
-
-.side-panel-logo {
-    width: 50px;
-    height: auto;
-    margin-top: 1.5rem;
+    box-shadow: 0 4px 12px rgba(255, 105, 135, 0.2);
     margin-bottom: 2rem;
 }
 
-.blossom-flow {
-    width: 50px;
-    height: auto;
-    animation: flow 3s ease-in-out infinite;
-    transition: transform 0.3s;
-}
-
-@keyframes flow {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-.side-icon-nav {
+.header-four-left {
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
     align-items: center;
-    justify-content: center;
-    flex: 1;
+    gap: 0.8rem;
 }
 
-.icon-btn {
-    width: 30px;
-    height: 30px;
-    align-items: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
+.blossom-fly-right {
+    width: 50px;
+    transition: transform 0.4s ease;
 }
 
-.flip-hover:hover {
-    transform: rotateY(180deg);
+.blossom-fly-right:hover {
+    transform: translateX(15px) rotate(5deg);
+}
+
+.header-four {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+    background: linear-gradient(to right, #ffe0e6, #ffc1cc);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(255, 105, 135, 0.2);
+    margin-bottom: 2rem;
+}
+
+.header-four-nav {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+}
+
+.header-four-right {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.blossom-fly-right {
+    width: 50px;
+    transition: transform 0.4s ease;
+}
+
+.blossom-fly-right:hover {
+    transform: translateX(15px) rotate(5deg);
+}
+
+.header-four-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #d6336c;
+}
+
+.header4-link {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1rem;
+    background-color: white;
+    border-radius: 30px;
+    font-size: 1rem;
+    color: #d6336c;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.header4-link:hover {
+    background-color: #ffd1dc;
+    transform: scale(1.05);
+    color: #8b0000;
+}
+
+.header4-link img {
+    width: 20px;
+    height: 20px;
 }
 
 .header-five {
