@@ -10,13 +10,32 @@
 }
 
 .footer-one {
-    background-color: #ffe4ec;
-    color: #8b0000;
+    background: linear-gradient(to right, #cc4c68, #a83450);
+    color: #ffe6ee;
     text-align: center;
-    padding: 1rem 0;
-    font-size: 0.9rem;
-    font-weight: 500;
-    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.2rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0 -2px 12px rgba(255, 105, 135, 0.3);
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 3px rgba(255, 200, 210, 0.4);
+    animation: footerGlowIn 1.2s ease-in-out both;
+
+    .footer-one-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .footer-blossom-fly {
+        width: 40px;
+        transition: transform 0.6s ease;
+    }
+
+    .footer-blossom-fly:hover {
+        transform: translateX(40px) rotate(5deg);
+    }
 }
 
 .footer-two {
