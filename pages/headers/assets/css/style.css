@@ -266,12 +266,16 @@
 }
 
 .nav-btn3:hover::before {
-    left: 0;
+    background: linear-gradient(to right, #ff5c7c, #e60039);
 }
 
 .nav-btn3:hover {
-    color: white;
+    color: #8b0000;
     transform: scale(1.05);
+    text-shadow:
+        0 0 5px rgba(255, 182, 193, 0.8),
+        0 0 10px rgba(255, 105, 135, 0.6),
+        0 0 15px rgba(255, 20, 147, 0.5);
 }
 
 .nav-btn3:active {
@@ -434,4 +438,57 @@
 .nav-link:active {
     transform: scale(0.95);
     color: #c2185b;
+}
+
+.fly-wrapper {
+  display: inline-block;
+}
+
+.blossom-fly-loop {
+  max-width: 3rem;
+  position: relative;
+  display: inline-block;
+  pointer-events: auto;
+}
+
+.fly-wrapper:hover .blossom-fly-loop {
+  animation: flyToRightOnce 3s ease-in-out forwards;
+  pointer-events: none; /* disables hover re-triggering */
+}
+
+@keyframes flyToRightOnce {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(calc(100vw - 6rem));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.glow-text {
+    color: rgb(204, 116, 131);
+    font-size: 2rem;
+    text-shadow:
+        0 0 5px rgba(255, 105, 135, 0.5),
+        0 0 10px rgba(255, 105, 135, 0.3),
+        0 0 15px rgba(255, 20, 147, 0.2);
+    animation: glowPulse 2s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        text-shadow:
+            0 0 5px rgba(255, 105, 135, 0.5),
+            0 0 10px rgba(255, 105, 135, 0.3),
+            0 0 15px rgba(255, 20, 147, 0.2);
+    }
+    50% {
+        text-shadow:
+            0 0 8px rgba(255, 182, 193, 0.8),
+            0 0 16px rgba(255, 105, 135, 0.6),
+            0 0 24px rgba(255, 20, 147, 0.4);
+    }
 }
